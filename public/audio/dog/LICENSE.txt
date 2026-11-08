@@ -1,0 +1,13 @@
+Dog bark / running SFX in this folder are Mixkit preview assets
+(https://mixkit.co/free-sound-effects/), free for commercial use under the
+Mixkit License (https://mixkit.co/license/#sfxFree).
+
+Filenames:
+  bark-short.mp3
+  bark-angry.mp3
+  bark-close.mp3
+  dog-running.mp3
+
+Optional replacements can be generated with:
+  npm run generate:dog
+(requires ELEVENLABS_API_KEY and Sound Effects API access).

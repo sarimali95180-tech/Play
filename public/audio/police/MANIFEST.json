@@ -1,0 +1,21 @@
+{
+  "note": "Mapped by content. Powerups were generated as jetpack → magnet → train → shield (not list order).",
+  "files": {
+    "start.mp3": "ElevenLabs_2026-11-01T10_58_29_Roger",
+    "chase.mp3": "ElevenLabs_2026-11-01T11_44_20_Roger",
+    "chase-funny.mp3": "ElevenLabs_2026-11-01T11_44_55_Roger",
+    "near-miss.mp3": "ElevenLabs_2026-11-01T11_45_31_Roger",
+    "close-chase.mp3": "ElevenLabs_2026-11-01T11_49_23_Adam",
+    "dog-command.mp3": "ElevenLabs_2026-11-01T11_49_49_Adam",
+    "jetpack.mp3": "ElevenLabs_2026-11-01T11_50_32_Adam",
+    "magnet.mp3": "ElevenLabs_2026-11-01T11_50_54_Adam",
+    "train-jump.mp3": "ElevenLabs_2026-11-01T11_53_48_Adam",
+    "shield.mp3": "ElevenLabs_2026-11-01T11_54_37_Adam",
+    "tired.mp3": "ElevenLabs_2026-11-01T12_07_42_Adam",
+    "complaint.mp3": "ElevenLabs_2026-11-01T12_08_19_Adam",
+    "almost-caught.mp3": "ElevenLabs_2026-11-01T12_08_47_Adam",
+    "arrest.mp3": "ElevenLabs_2026-11-01T12_10_58_Adam",
+    "arrest-funny.mp3": "ElevenLabs_2026-11-01T12_11_21_Adam",
+    "dog-running-voice.mp3": "ElevenLabs_2026-11-01T12_11_46_Adam"
+  }
+}

@@ -1,0 +1,306 @@
+/**
+ * Phase 10 — characters, boards, worlds catalog (visual + economy data).
+ * Persisted unlock IDs live in meta.js; this file is the source of truth for defs.
+ */
+
+export const PLAY_MODES = {
+  normal: 'normal',
+  endless: 'endless',
+}
+
+/** 10 playable characters — distinct silhouettes via style tags. */
+export const CHARACTERS = [
+  {
+    id: 'alex',
+    name: 'Alex',
+    blurb: 'Classic boy runner. Sporty kit and backpack.',
+    price: 0,
+    style: 'sport',
+    colors: {
+      skin: '#d4a574',
+      top: '#374151',
+      bottom: '#1e3a8a',
+      accent: '#ef4444',
+      hat: '#111827',
+      shoe: '#0f172a',
+    },
+  },
+  {
+    id: 'maya',
+    name: 'Maya',
+    blurb: 'Girl runner. Streetwear, ponytail, bright kicks.',
+    price: 1500,
+    style: 'street',
+    colors: {
+      skin: '#e8b892',
+      top: '#db2777',
+      bottom: '#312e81',
+      accent: '#f472b6',
+      hat: '#be185d',
+      shoe: '#f97316',
+    },
+  },
+  {
+    id: 'robo',
+    name: 'Robo-X',
+    blurb: 'Futuristic robot. Chrome body, glowing blue eyes.',
+    price: 3000,
+    style: 'robot',
+    colors: {
+      skin: '#94a3b8',
+      top: '#334155',
+      bottom: '#0ea5e9',
+      accent: '#38bdf8',
+      hat: '#67e8f9',
+      shoe: '#1e293b',
+    },
+  },
+  {
+    id: 'shadow',
+    name: 'Shadow Ninja',
+    blurb: 'Black and purple futuristic ninja gear.',
+    price: 5000,
+    style: 'ninja',
+    colors: {
+      skin: '#c4a484',
+      top: '#0f172a',
+      bottom: '#1e1b4b',
+      accent: '#a855f7',
+      hat: '#0f172a',
+      shoe: '#2e1065',
+    },
+  },
+  {
+    id: 'blaze',
+    name: 'Blaze Runner',
+    blurb: 'Fiery orange suit with glowing flame trim.',
+    price: 8000,
+    style: 'fire',
+    colors: {
+      skin: '#e0a878',
+      top: '#ea580c',
+      bottom: '#7c2d12',
+      accent: '#fbbf24',
+      hat: '#f97316',
+      shoe: '#431407',
+    },
+  },
+  {
+    id: 'ice',
+    name: 'Ice Queen',
+    blurb: 'Icy blue futuristic outfit, frost sparkle.',
+    price: 10000,
+    style: 'ice',
+    colors: {
+      skin: '#f0d5c0',
+      top: '#67e8f9',
+      bottom: '#164e63',
+      accent: '#a5f3fc',
+      hat: '#e0f2fe',
+      shoe: '#083344',
+    },
+  },
+  {
+    id: 'cyber',
+    name: 'Cyber Girl',
+    blurb: 'Neon purple kit with holographic accents.',
+    price: 12000,
+    style: 'cyber',
+    colors: {
+      skin: '#e8b4a0',
+      top: '#2dd4bf',
+      bottom: '#1e1b4b',
+      accent: '#c084fc',
+      hat: '#22d3ee',
+      shoe: '#fb923c',
+    },
+  },
+  {
+    id: 'space',
+    name: 'Space Explorer',
+    blurb: 'Astronaut-inspired running suit.',
+    price: 15000,
+    style: 'space',
+    colors: {
+      skin: '#d4a574',
+      top: '#e2e8f0',
+      bottom: '#334155',
+      accent: '#38bdf8',
+      hat: '#f8fafc',
+      shoe: '#0f172a',
+    },
+  },
+  {
+    id: 'golden',
+    name: 'Golden Legend',
+    blurb: 'Premium golden armor, soft gold particles.',
+    price: 20000,
+    style: 'gold',
+    colors: {
+      skin: '#e8c4a0',
+      top: '#fbbf24',
+      bottom: '#a16207',
+      accent: '#fde68a',
+      hat: '#f59e0b',
+      shoe: '#78350f',
+    },
+  },
+  {
+    id: 'phantom',
+    name: 'Dark Phantom',
+    blurb: 'Dark armor with glowing red details.',
+    price: 25000,
+    style: 'dark',
+    colors: {
+      skin: '#a8a29e',
+      top: '#18181b',
+      bottom: '#27272a',
+      accent: '#ef4444',
+      hat: '#09090b',
+      shoe: '#450a0a',
+    },
+  },
+]
+
+/** Boards — id `none` = no board equipped. */
+export const HOVERBOARDS = [
+  {
+    id: 'none',
+    name: 'No Board',
+    blurb: 'Run on foot.',
+    price: 0,
+    kind: 'none',
+    color: '#000000',
+    emissive: '#000000',
+    trail: '#000000',
+  },
+  {
+    id: 'classic',
+    name: 'Classic Street',
+    blurb: 'Skateboard with visible wheels.',
+    price: 0,
+    kind: 'skate',
+    color: '#1e293b',
+    emissive: '#334155',
+    trail: '#64748b',
+  },
+  {
+    id: 'neon',
+    name: 'Neon Blue Hover',
+    blurb: 'Blue neon glow and energy trail.',
+    price: 2000,
+    kind: 'hover',
+    color: '#0c4a6e',
+    emissive: '#38bdf8',
+    trail: '#7dd3fc',
+  },
+  {
+    id: 'fire',
+    name: 'Fire Dragon',
+    blurb: 'Orange flame trail — premium fire FX.',
+    price: 6000,
+    kind: 'fire',
+    color: '#7c2d12',
+    emissive: '#fb923c',
+    trail: '#f97316',
+  },
+  {
+    id: 'iceboard',
+    name: 'Ice Glider',
+    blurb: 'Icy particles and frost trail.',
+    price: 7000,
+    kind: 'ice',
+    color: '#0e7490',
+    emissive: '#67e8f9',
+    trail: '#a5f3fc',
+  },
+  {
+    id: 'thunder',
+    name: 'Thunder Bolt',
+    blurb: 'Yellow lightning and electric sparks.',
+    price: 9000,
+    kind: 'thunder',
+    color: '#713f12',
+    emissive: '#facc15',
+    trail: '#fde047',
+  },
+  {
+    id: 'galaxy',
+    name: 'Galaxy Surfer',
+    blurb: 'Purple cosmic trail with stars.',
+    price: 12000,
+    kind: 'galaxy',
+    color: '#2e1065',
+    emissive: '#c084fc',
+    trail: '#e9d5ff',
+  },
+  {
+    id: 'phoenix',
+    name: 'Golden Phoenix',
+    blurb: 'Golden wings and bright fire trail.',
+    price: 18000,
+    kind: 'phoenix',
+    color: '#92400e',
+    emissive: '#fbbf24',
+    trail: '#fdba74',
+  },
+  {
+    id: 'inferno',
+    name: 'Dark Inferno',
+    blurb: 'Black and red board with ember particles.',
+    price: 22000,
+    kind: 'inferno',
+    color: '#1c1917',
+    emissive: '#ef4444',
+    trail: '#f87171',
+  },
+]
+
+export const DAILY_MISSION_DEFS = [
+  { id: 'run500', label: 'Run 500 meters', target: 500, key: 'distance', reward: 100 },
+  { id: 'coins50', label: 'Collect 50 coins', target: 50, key: 'coins', reward: 150 },
+  { id: 'jump20', label: 'Jump 20 times', target: 20, key: 'jumps', reward: 100 },
+  { id: 'slide15', label: 'Slide 15 times', target: 15, key: 'slides', reward: 100 },
+  { id: 'near5', label: 'Perform 5 near misses', target: 5, key: 'nearMisses', reward: 200 },
+  { id: 'worlds3', label: 'Travel through 3 worlds', target: 3, key: 'worlds', reward: 250 },
+  { id: 'magnet3', label: 'Use a magnet 3 times', target: 3, key: 'magnets', reward: 150 },
+  { id: 'coins200', label: 'Collect 200 coins', target: 200, key: 'coins', reward: 400 },
+]
+
+export const WEEKLY_MISSION_DEFS = [
+  { id: 'w_run10k', label: 'Run 10,000 total meters', target: 10000, key: 'weekDistance', reward: 800 },
+  { id: 'w_coins2k', label: 'Collect 2,000 coins', target: 2000, key: 'weekCoins', reward: 900 },
+  { id: 'w_jump100', label: 'Perform 100 jumps', target: 100, key: 'weekJumps', reward: 600 },
+  { id: 'w_dodge100', label: 'Dodge 100 obstacles', target: 100, key: 'weekDodges', reward: 700 },
+  { id: 'w_worlds8', label: 'Visit 8 different worlds', target: 8, key: 'weekWorldSet', reward: 1000 },
+  { id: 'w_daily20', label: 'Complete 20 daily missions', target: 20, key: 'weekDailies', reward: 1200 },
+  { id: 'w_near30', label: 'Perform 30 near misses', target: 30, key: 'weekNearMisses', reward: 850 },
+]
+
+export const ACHIEVEMENTS = [
+  { id: 'first_run', label: 'First Run', blurb: 'Finish any run', key: 'runs', target: 1, reward: 40 },
+  { id: 'speed_demon', label: 'Speed Demon', blurb: 'Score 15,000 in one run', key: 'bestScoreNormal', target: 15000, reward: 200 },
+  { id: 'coin_collector', label: 'Coin Collector', blurb: 'Bank 2,000 lifetime coins', key: 'lifetimeCoins', target: 2000, reward: 180 },
+  { id: 'escape_artist', label: 'Escape Artist', blurb: 'Land 25 near misses', key: 'lifetimeNearMisses', target: 25, reward: 160 },
+  { id: 'world_explorer', label: 'World Explorer', blurb: 'Visit 8 world themes', key: 'worldsSeen', target: 8, reward: 220 },
+  { id: 'fire_rider', label: 'Fire Rider', blurb: 'Equip Fire Dragon board', key: 'hasFireBoard', target: 1, reward: 150 },
+  { id: 'robot_runner', label: 'Robot Runner', blurb: 'Unlock Robo-X', key: 'hasRobo', target: 1, reward: 120 },
+  { id: 'marathon_master', label: 'Marathon Master', blurb: 'Reach 2,000m in Normal mode', key: 'bestDistanceNormal', target: 2000, reward: 250 },
+  { id: 'mission_champ', label: 'Mission Champion', blurb: 'Claim 30 daily missions', key: 'dailiesClaimed', target: 30, reward: 300 },
+  { id: 'golden_legend', label: 'Golden Legend', blurb: 'Unlock Golden Legend character', key: 'hasGolden', target: 1, reward: 400 },
+]
+
+/** Legacy id → Phase 10 id */
+export const CHARACTER_ID_MAP = {
+  neon: 'alex',
+  ninja: 'shadow',
+  racer: 'blaze',
+  aurora: 'cyber',
+}
+
+export const BOARD_ID_MAP = {
+  spark: 'classic',
+  blaze: 'fire',
+  frost: 'iceboard',
+  void: 'galaxy',
+}
